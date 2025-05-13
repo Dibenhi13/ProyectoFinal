@@ -13,58 +13,53 @@
 //
 
 import SwiftUI
+import Foundation
 
-class DragonBallAPI : Codable{
+class HarryPotterAPI : Codable{
     let url_base = "https://potterapi-fedeperin.vercel.app/en"
     
     //PERSONAJES
-    func descargar_pagina_personajes() async -> PaginaResultado?{
-        let ubicacion_recurso = "/characters"
-        
-        return await descargar(recurso: ubicacion_recurso)
-    }
+    func descargarPersonajes() async -> [Character]? {
+          let recurso = "/characters"
+          return await descargar(recurso: recurso)
+      }
     
-    func descargar_informacion_personaje(index: Int) async -> Character?{
-        let ubicacion_recurso = "/characters/\(index)"
-        
-        return await descargar(recurso: ubicacion_recurso)
-    }
+    func descargarInformacionPersonaje(id: String) async -> Character? {
+           let recurso = "/characters/\(id)"
+           return await descargar(recurso: recurso)
+       }
     
     //BOOKS
-    func descargar_pagina_libros() async -> PaginaResultado?{
-        let ubicacion_recurso = "/books"
-        
-        return await descargar(recurso: ubicacion_recurso)
-    }
+    func descargarLibros() async -> [Books]? {
+           let recurso = "/books"
+           return await descargar(recurso: recurso)
+       }
     
     func descargar_informacion_libros(index: Int) async -> Books?{
         let ubicacion_recurso = "/books/\(index)"
-        
         return await descargar(recurso: ubicacion_recurso)
     }
     
     
     //HECHIZOS
-    func descargar_pagina_hechizos() async -> PaginaResultado?{
-        let ubicacion_recurso = "/spells"
-        
-        return await descargar(recurso: ubicacion_recurso)
-    }
+    func descargarHechizos() async -> [Spells]? {
+          let recurso = "/spells"
+          return await descargar(recurso: recurso)
+      }
     
     func descargar_informacion_hechizos(index: Int) async -> Books?{
         let ubicacion_recurso = "/spells/\(index)"
-        
         return await descargar(recurso: ubicacion_recurso)
     }
+    
     
     //CASAS
-    func descargar_pagina_casas() async -> PaginaResultado?{
-        let ubicacion_recurso = "/houses"
-        
-        return await descargar(recurso: ubicacion_recurso)
-    }
+    func descargarCasas() async -> [Houses]? {
+          let recurso = "/houses"
+          return await descargar(recurso: recurso)
+      }
     
-    func descargar_informacion_casas(index: Int) async -> Books?{
+    func descargar_informacion_casas(index: Int) async -> Houses?{
         let ubicacion_recurso = "/houses/\(index)"
         
         return await descargar(recurso: ubicacion_recurso)

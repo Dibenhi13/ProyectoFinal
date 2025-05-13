@@ -6,9 +6,10 @@
 //
 
 import SwiftUI
+import Foundation
 
 struct Spells: Identifiable, Codable {
-    let index: Int
+    let id: String
     let spell: String
-    let use: String
+    let use: String?
 }

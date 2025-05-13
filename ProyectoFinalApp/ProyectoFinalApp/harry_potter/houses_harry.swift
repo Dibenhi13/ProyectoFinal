@@ -6,11 +6,13 @@
 //
 
 import SwiftUI
+import Foundation
 
 struct Houses: Identifiable, Codable {
-    let index: Int
+    let id: String
     let house: String
-    let founder: Bool
-    let animal: String
+    let founder: String?
+    let animal: String?
+    let houseColors: String?
 }
 
