@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct HouseSelectionView: View {
+    @EnvironmentObject var controlador: ControladorApp
     @EnvironmentObject var themeManager: AppThemeManager
     @Environment(\.dismiss) var dismiss
     

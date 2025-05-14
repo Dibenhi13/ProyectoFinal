@@ -27,10 +27,19 @@ class AppThemeManager: ObservableObject {
     }
     
     var primaryColor: Color{
-        selectedHouse?.color ?? Color("NeutralBackground")
+        if let house = selectedHouse{
+            return Color(house.color)
+        }
+        else{
+            return Color("NeutralPrimary")
+        }
     }
     
     var secondaryColor: Color{
-        selectedHouse?.secondaryColor ?? Color("NeutralAccent")
+        if let house = selectedHouse{
+            return Color(house.secondaryColor)
+        }else{
+            return Color("NeutralAccent")
+        }
     }
 }

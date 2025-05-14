@@ -11,5 +11,5 @@ import Foundation
 struct Spells: Identifiable, Codable {
     let id: String
     let spell: String
-    let use: String?
+    let use: String
 }

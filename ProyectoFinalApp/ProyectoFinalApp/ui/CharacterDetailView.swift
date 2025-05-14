@@ -56,6 +56,3 @@ struct CharacterDetailView: View {
     }
 }
 
-/*#Preview {
-    CharacterDetailView()
-}*/

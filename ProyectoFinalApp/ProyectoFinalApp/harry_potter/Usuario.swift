@@ -9,7 +9,7 @@ import SwiftUI
 import Foundation
 
 struct Usuario: Identifiable, Codable{
-    let id: Int
+    let id: UUID = UUID()
     let username: String
     let name: String
     let email: String

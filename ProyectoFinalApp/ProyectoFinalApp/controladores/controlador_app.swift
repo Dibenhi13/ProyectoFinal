@@ -5,14 +5,13 @@
 //  Created by alumno on 5/12/25.
 //
 
+import Foundation
 import SwiftUI
-@Observable
-@MainActor
+
 
 public class ControladorApp: ObservableObject {
     //USUARIO
-   var perfil_a_mostrar: Usuario? = Usuario(
-        id: 00013,
+   @Published var perfil_a_mostrar: Usuario? = Usuario(
         username: "Harry123",
         name: "Dibenhi Garza",
         email: "harry123@hogwarts.com"
@@ -20,17 +19,17 @@ public class ControladorApp: ObservableObject {
     
     
    // PERSONAJES
-   var personajes: [Character] = []
-   var personajeSeleccionado: Character? = nil
+    @Published var personajes: [Character] = []
+    @Published var personajeSeleccionado: Character? = nil
    // LIBROS
-   var libros: [Books] = []
-   var libroSeleccionado: Books? = nil
+    @Published var libros: [Books] = []
+    @Published var libroSeleccionado: Books? = nil
    // HECHIZOS
-   var hechizos: [Spells] = []
-   var hechizoSeleccionado: Spells? = nil
+    @Published var hechizos: [Spells] = []
+    @Published var hechizoSeleccionado: Spells? = nil
    // CASAS
-   var casas: [Houses] = []
-   var casaSeleccionada: Houses? = nil
+    @Published var casas: [Houses] = []
+    @Published var casaSeleccionada: Houses? = nil
    init() {
        Task.detached(priority: .high) {
            await self.descargarPersonajes()

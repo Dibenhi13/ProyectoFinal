@@ -16,7 +16,7 @@ struct MainTabView: View {
                 .tabItem{
                     Label("Home", systemImage: "house.fill")
                 }
-            /*CharacterView()
+            CharactersView()
                 .tabItem{
                     Label("Characters", systemImage: "person.3.fill")
                 }
@@ -28,10 +28,10 @@ struct MainTabView: View {
                 .tabItem{
                     Label("Books", systemImage: "book.fill")
                 }
-            ProfileView()
+            PerfilUsuario()
                 .tabItem{
                     Label("Profile", systemImage: "person.crop.circle")
-                }*/
+                }
         }
         .accentColor(themeManager.primaryColor)
     }

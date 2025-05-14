@@ -11,10 +11,10 @@ import Foundation
 struct Character: Identifiable, Codable {
     let id: String
     let fullName: String
-    let nickname: [String]?
+    let nickname: String
     let hogwartsHouse: String?
     let interpretedBy: String?
     let birthdate: String?
-    let image: String?
+    let image: String
     
 }

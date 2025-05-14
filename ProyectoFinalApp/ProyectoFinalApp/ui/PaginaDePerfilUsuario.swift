@@ -7,15 +7,14 @@
 import SwiftUI
 import PhotosUI
 // Modelo básico de perfil
-struct Perfil {
-   var username: String
-   var name: String
-   var email: String
-}
+
 struct PerfilUsuario: View {
    @EnvironmentObject var controlador: ControladorApp
+    @EnvironmentObject var themeManager: AppThemeManager
+    
    @State private var foto_seleccionada: PhotosPickerItem? = nil
    @State private var foto_a_mostrar: UIImage? = nil
+    
    var body: some View {
        VStack(spacing: 20) {
            // Foto de perfil
@@ -38,6 +37,7 @@ struct PerfilUsuario: View {
                }
            }
            .padding(.top, 20)
+           
            // Info de usuario
            RoundedRectangle(cornerRadius: 20)
                .fill(Color.white)
@@ -60,13 +60,11 @@ struct PerfilUsuario: View {
            Spacer()
        }
        .frame(maxWidth: .infinity, maxHeight: .infinity)
-       .background(Color.pink.opacity(0.2))
-       .onDisappear {
-           print("Adiós, vista de perfil cerrada.")
-       }
+       .background(themeManager.primaryColor.opacity(0.2))
    }
 }
 #Preview {
    PerfilUsuario()
         .environmentObject(ControladorApp())
+        .environmentObject(AppThemeManager())
 }
