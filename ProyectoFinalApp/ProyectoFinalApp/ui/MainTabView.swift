@@ -22,7 +22,7 @@ struct MainTabView: View {
                 }
             SpellsView()
                 .tabItem{
-                    Label("Spells", systemImage: "wand.fill")
+                    Label("Spells", systemImage: "wand.and.stars")
                 }
             BooksView()
                 .tabItem{

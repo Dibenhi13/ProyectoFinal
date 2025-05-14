@@ -11,6 +11,7 @@
 		FB7FF6E52DCE59F30098AB41 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7FF6E42DCE59F30098AB41 /* ContentView.swift */; };
 		FB7FF6E72DCE59F40098AB41 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB7FF6E62DCE59F40098AB41 /* Assets.xcassets */; };
 		FB7FF6EA2DCE59F40098AB41 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB7FF6E92DCE59F40098AB41 /* Preview Assets.xcassets */; };
+		FB80AD3A2DD4FF73000EBDD3 /* DescagaModelo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB80AD392DD4FF73000EBDD3 /* DescagaModelo.swift */; };
 		FB9E3E172DD3EE990050C378 /* CharacterDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9E3E162DD3EE990050C378 /* CharacterDetailView.swift */; };
 		FB9E3E192DD3F20A0050C378 /* SpellsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9E3E182DD3F20A0050C378 /* SpellsView.swift */; };
 		FB9E3E1B2DD3F4470050C378 /* BooksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9E3E1A2DD3F4470050C378 /* BooksView.swift */; };
@@ -20,7 +21,6 @@
 		FBB285AE2DD246E40050C8CF /* errores.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB285AD2DD246E40050C8CF /* errores.swift */; };
 		FBB285B02DD247080050C8CF /* harrypotter_api.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB285AF2DD247080050C8CF /* harrypotter_api.swift */; };
 		FBB285B32DD2478B0050C8CF /* controlador_app.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB285B22DD2478B0050C8CF /* controlador_app.swift */; };
-		FBB285B62DD247F40050C8CF /* pagina_resultados.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB285B52DD247F40050C8CF /* pagina_resultados.swift */; };
 		FBB285B92DD2482B0050C8CF /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB285B82DD2482B0050C8CF /* Character.swift */; };
 		FBB285BB2DD249200050C8CF /* houses_harry.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB285BA2DD249200050C8CF /* houses_harry.swift */; };
 		FBB285BD2DD249540050C8CF /* spells_harry.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB285BC2DD249540050C8CF /* spells_harry.swift */; };
@@ -39,6 +39,7 @@
 		FB7FF6E42DCE59F30098AB41 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		FB7FF6E62DCE59F40098AB41 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FB7FF6E92DCE59F40098AB41 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		FB80AD392DD4FF73000EBDD3 /* DescagaModelo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescagaModelo.swift; sourceTree = "<group>"; };
 		FB9E3E162DD3EE990050C378 /* CharacterDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailView.swift; sourceTree = "<group>"; };
 		FB9E3E182DD3F20A0050C378 /* SpellsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellsView.swift; sourceTree = "<group>"; };
 		FB9E3E1A2DD3F4470050C378 /* BooksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksView.swift; sourceTree = "<group>"; };
@@ -48,7 +49,6 @@
 		FBB285AD2DD246E40050C8CF /* errores.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = errores.swift; sourceTree = "<group>"; };
 		FBB285AF2DD247080050C8CF /* harrypotter_api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = harrypotter_api.swift; sourceTree = "<group>"; };
 		FBB285B22DD2478B0050C8CF /* controlador_app.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = controlador_app.swift; sourceTree = "<group>"; };
-		FBB285B52DD247F40050C8CF /* pagina_resultados.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pagina_resultados.swift; sourceTree = "<group>"; };
 		FBB285B82DD2482B0050C8CF /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		FBB285BA2DD249200050C8CF /* houses_harry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = houses_harry.swift; sourceTree = "<group>"; };
 		FBB285BC2DD249540050C8CF /* spells_harry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = spells_harry.swift; sourceTree = "<group>"; };
@@ -133,22 +133,14 @@
 		FBB285B42DD247DB0050C8CF /* harry_potter */ = {
 			isa = PBXGroup;
 			children = (
-				FBB285B72DD247F80050C8CF /* soporte */,
 				FBB285B82DD2482B0050C8CF /* Character.swift */,
 				FBB285BA2DD249200050C8CF /* houses_harry.swift */,
 				FBB285BC2DD249540050C8CF /* spells_harry.swift */,
 				FBB285BE2DD24AD00050C8CF /* books_harry.swift */,
 				FB9E3E222DD402FF0050C378 /* Usuario.swift */,
+				FB80AD392DD4FF73000EBDD3 /* DescagaModelo.swift */,
 			);
 			path = harry_potter;
-			sourceTree = "<group>";
-		};
-		FBB285B72DD247F80050C8CF /* soporte */ = {
-			isa = PBXGroup;
-			children = (
-				FBB285B52DD247F40050C8CF /* pagina_resultados.swift */,
-			);
-			path = soporte;
 			sourceTree = "<group>";
 		};
 		FBB285C02DD24BD00050C8CF /* ui */ = {
@@ -245,6 +237,7 @@
 				FBB285C42DD24C770050C8CF /* House.swift in Sources */,
 				FB7FF6E52DCE59F30098AB41 /* ContentView.swift in Sources */,
 				FB9E3E1B2DD3F4470050C378 /* BooksView.swift in Sources */,
+				FB80AD3A2DD4FF73000EBDD3 /* DescagaModelo.swift in Sources */,
 				FBB285B02DD247080050C8CF /* harrypotter_api.swift in Sources */,
 				FBB285CE2DD256800050C8CF /* CharactersView.swift in Sources */,
 				FB9E3E232DD402FF0050C378 /* Usuario.swift in Sources */,
@@ -253,7 +246,6 @@
 				FBB285B92DD2482B0050C8CF /* Character.swift in Sources */,
 				FB9E3E1D2DD3F6C60050C378 /* BookDetailView.swift in Sources */,
 				FBB285AE2DD246E40050C8CF /* errores.swift in Sources */,
-				FBB285B62DD247F40050C8CF /* pagina_resultados.swift in Sources */,
 				FBB285C22DD24BEC0050C8CF /* HomeView.swift in Sources */,
 				FB9E3E192DD3F20A0050C378 /* SpellsView.swift in Sources */,
 				FBB285BB2DD249200050C8CF /* houses_harry.swift in Sources */,

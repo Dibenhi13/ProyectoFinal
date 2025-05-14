@@ -5,57 +5,61 @@
 //  Created by alumno on 5/12/25.
 //
 
-import Foundation
 import SwiftUI
-
-
-public class ControladorApp: ObservableObject {
-    //USUARIO
+class ControladorApp: ObservableObject {
    @Published var perfil_a_mostrar: Usuario? = Usuario(
-        username: "Harry123",
-        name: "Dibenhi Garza",
-        email: "harry123@hogwarts.com"
-    )
-    
-    
-   // PERSONAJES
-    @Published var personajes: [Character] = []
-    @Published var personajeSeleccionado: Character? = nil
-   // LIBROS
-    @Published var libros: [Books] = []
-    @Published var libroSeleccionado: Books? = nil
-   // HECHIZOS
-    @Published var hechizos: [Spells] = []
-    @Published var hechizoSeleccionado: Spells? = nil
-   // CASAS
-    @Published var casas: [Houses] = []
-    @Published var casaSeleccionada: Houses? = nil
+       username: "Harry123",
+       name: "Dibenhi Garza",
+       email: "harry123@hogwarts.com"
+   )
+   @Published var personajes: [Character] = []
+   @Published var personajeSeleccionado: Character? = nil
+   @Published var libros: [Books] = []
+   @Published var libroSeleccionado: Books? = nil
+   @Published var hechizos: [Spells] = []
+   @Published var hechizoSeleccionado: Spells? = nil
+   @Published var casas: [Houses] = []
+   @Published var casaSeleccionada: Houses? = nil
+   private let api = HarryPotterAPI()
    init() {
-       Task.detached(priority: .high) {
-           await self.descargarPersonajes()
-           await self.descargarLibros()
-           await self.descargarHechizos()
-           await self.descargarCasas()
+       Task {
+           await descargarPersonajes()
+           await descargarLibros()
+           await descargarHechizos()
+           await descargarCasas()
        }
    }
-   // DESCARGAR LISTAS COMPLETAS
+   // DESCARGAS
    func descargarPersonajes() async {
-       guard let resultado = await HarryPotterAPI().descargarPersonajes() else { return }
-       self.personajes = resultado
+       print("Descargando personajes...")
+       if let resultado = await api.descargarPersonajes() {
+           await MainActor.run { self.personajes = resultado }
+       } else {
+           print("Error al descargar personajes")
+       }
    }
    func descargarLibros() async {
-       guard let resultado = await HarryPotterAPI().descargarLibros() else { return }
-       self.libros = resultado
+       if let resultado = await api.descargarLibros() {
+           await MainActor.run { self.libros = resultado }
+       } else {
+           print("Error al descargar libros")
+       }
    }
    func descargarHechizos() async {
-       guard let resultado = await HarryPotterAPI().descargarHechizos() else { return }
-       self.hechizos = resultado
+       if let resultado = await api.descargarHechizos() {
+           await MainActor.run { self.hechizos = resultado }
+       } else {
+           print("Error al descargar hechizos")
+       }
    }
    func descargarCasas() async {
-       guard let resultado = await HarryPotterAPI().descargarCasas() else { return }
-       self.casas = resultado
+       if let resultado = await api.descargarCasas() {
+           await MainActor.run { self.casas = resultado }
+       } else {
+           print("Error al descargar casas")
+       }
    }
-   // SELECCIONAR DETALLE
+   // SELECCIÓN
    func seleccionarPersonaje(_ personaje: Character) {
        self.personajeSeleccionado = personaje
    }

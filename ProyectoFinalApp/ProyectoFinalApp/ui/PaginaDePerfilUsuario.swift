@@ -19,7 +19,7 @@ struct PerfilUsuario: View {
        VStack(spacing: 20) {
            // Foto de perfil
            PhotosPicker(selection: $foto_seleccionada) {
-               Image(uiImage: foto_a_mostrar ?? UIImage(named: "harryPic") ?? UIImage())
+               Image(uiImage: foto_a_mostrar ?? UIImage(named: "harry_pic") ?? UIImage())
                    .resizable()
                    .aspectRatio(contentMode: .fill)
                    .frame(width: 100, height: 100)

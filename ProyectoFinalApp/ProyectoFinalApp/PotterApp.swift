@@ -10,11 +10,15 @@ import SwiftUI
 @main
 struct PotterApp: App {
     @StateObject var themeManager = AppThemeManager()
+    @StateObject var controlador = ControladorApp()
     
     var body: some Scene {
         WindowGroup {
             MainTabView()
                 .environmentObject(themeManager)
+                .environmentObject(controlador)
         }
     }
 }
+
+

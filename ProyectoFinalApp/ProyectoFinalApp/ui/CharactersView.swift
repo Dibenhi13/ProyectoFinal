@@ -29,7 +29,7 @@ struct CharactersView: View {
                             VStack(alignment: .leading) {
                                 Text(character.fullName)
                                     .font(.headline)
-                                if let house = character.house {
+                                if let house = character.hogwartsHouse {
                                     Text(house)
                                         .font(.subheadline)
                                         .foregroundColor(.secondary)
