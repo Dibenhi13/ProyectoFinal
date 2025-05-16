@@ -8,12 +8,14 @@ import SwiftUI
 import Foundation
 
 struct Books: Identifiable, Codable {
-    let id: String
-    let title: String
-    let originalTitle: String
-    let releaseDate: String
-    let description: String
-    let pages: Int
-    let cover: String
+    var id: String? { serial }
+        let serial: String?
+        let title: String?
+        let summary: String?
+        let release_date: String?
+        let dedication: String?
+        let pages: String?
+        let cover: String?
+        let wiki: String?
 }
 

@@ -8,51 +8,92 @@
 import SwiftUI
 
 struct CharacterDetailView: View {
+
+    @EnvironmentObject var controlador: ControladorApp
     let character: Character
-    
+
     var body: some View {
-        ScrollView{
-            VStack(spacing: 20){
-                if let imageUrl = character.image, let url = URL(string: imageUrl){
-                    AsyncImage(url: url){ image in
+        ScrollView {
+            VStack(alignment: .leading, spacing: 16) {
+                // Imagen
+                if let personaje = controlador.personajeSeleccionado,
+                   let imageURLString = personaje.image,
+                   let imageUrl = URL(string: imageURLString) {
+                    AsyncImage(url: imageUrl) { image in
                         image
                             .resizable()
-                            .aspectRatio(contentMode: .fit)
-                    } placeholder:{
-                        Color.gray
+                            .scaledToFit()
+                            .frame(height: 300)
+                            .clipped()
+                            .cornerRadius(20)
+                    } placeholder: {
+                        Color.gray.opacity(0.2)
+                            .frame(height: 300)
+                            .cornerRadius(20)
                     }
-                    .frame(height: 200)
-                    .clipShape(RoundedRectangle(cornerRadius: 10))
+                    .padding(.horizontal)
                 }
-                Text(character.fullName)
-                    .font(.title)
-                    .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
-                Group{
-                    infoRow(label: "Full Name", value: character.fullName)
-                    infoRow(label: "Nickname", value: character.nickname)
-                    infoRow(label: "Hogwarts House", value: character.hogwartsHouse)
-                    infoRow(label: "Interpreted By", value: character.interpretedBy)
-                    infoRow(label: "Birthdate", value: character.birthdate)
+
+                // Nombre y actor
+                infoItem(label: "Name", value: character.name)
+                infoItem(label: "Played by", value: character.actor)
+                Divider()
+                // Datos generales
+                infoItem(label: "Hogwarts House", value: character.house ?? "Unknown")
+                infoItem(label: "Species", value: character.species ?? "Unknown")
+                infoItem(label: "Gender", value: character.gender.capitalized)
+                if let sangre = character.ancestry?.capitalized {
+                    infoItem(label: "Ancestry", value: sangre)
+                }
+                infoItem(label: "Date of Birth", value: character.dateOfBirth ?? "Unknown")
+
+                if let year = character.yearOfBirth {
+                    infoItem(label: "Year of Birth", value: "\(year)")
+                }
+
+                if let ojos = character.eyeColour?.capitalized {
+                    infoItem(label: "Eye Color", value: ojos)
+                }
+                if let pelo = character.hairColour?.capitalized {
+                    infoItem(label: "Hair Color", value: pelo)
+                }
+
+                // Varita
+                Divider()
+                Text("Wand")
+                    .font(.headline)
+                    .padding(.horizontal)
+                infoItem(label: "Wood", value: character.wand.wood ?? "Unknown")
+                infoItem(label: "Core", value: character.wand.core ?? "Unknown")
+                if let length = character.wand.length {
+                    infoItem(label: "Length", value: "\(length) inches")
+                }
+
+                // Patronus
+                if let patronus = character.patronus?.capitalized {
+                    infoItem(label: "Patronus", value: patronus)
                 }
             }
             .padding()
         }
-        .navigationTitle(character.fullName)
+        .navigationTitle(character.name)
         .navigationBarTitleDisplayMode(.inline)
+        .background(Color.white)
     }
-    
-    @ViewBuilder
-    func infoRow(label: String, value: String?) -> some View {
-        if let value = value, !value.isEmpty{
-            HStack{
-                Text("\(label):")
-                    .fontWeight(.bold)
-                Spacer()
-                Text(value)
-                    .foregroundColor(.secondary)
-            }
-            .padding(.vertical, 2)
+
+
+    func infoItem(label: String, value: String) -> some View {
+        VStack(alignment: .leading, spacing: 4) {
+            Text(label)
+                .font(.caption)
+                .foregroundColor(.gray)
+            Text(value)
+                .font(.body)
+                .foregroundColor(.black)
+            Divider().background(Color.gray.opacity(0.3))
         }
+        .padding(.horizontal)
     }
 }
-
+ 
+ 

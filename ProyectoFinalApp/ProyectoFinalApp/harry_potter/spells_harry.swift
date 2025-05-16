@@ -9,7 +9,7 @@ import SwiftUI
 import Foundation
 
 struct Spells: Identifiable, Codable {
-    let id: String
-    let spell: String
-    let use: String
+    let id: String?
+    let name: String?
+    let description: String?
 }

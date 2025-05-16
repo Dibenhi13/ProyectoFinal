@@ -27,7 +27,7 @@ struct BooksView: View {
                             .frame(width:60, height: 90)
                             .clipShape(RoundedRectangle(cornerRadius: 8))
                             
-                            Text(book.title)
+                            Text(book.title ?? "Unknown")
                                 .font(.headline)
                                 .padding(.leading, 10)
                         }

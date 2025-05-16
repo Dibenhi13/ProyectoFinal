@@ -14,7 +14,7 @@ struct BookDetailView: View {
     var body: some View {
         ScrollView {
             VStack(spacing: 20) {
-                AsyncImage(url: URL(string: book.cover)) { image in
+                AsyncImage(url: URL(string: book.cover ?? "Image didnt load")) { image in
                     image
                         .resizable()
                         .aspectRatio(contentMode: .fit)
@@ -24,16 +24,16 @@ struct BookDetailView: View {
                 .frame(height: 250)
                 .clipShape(RoundedRectangle(cornerRadius: 10))
             }
-            Text(book.title)
+            Text(book.title ?? "Unknown")
                 .font(.title)
                 .fontWeight(.bold)
                 .multilineTextAlignment(.center)
-            Text(book.description)
+            Text(book.summary ?? "Unknown")
                 .font(.body)
                 .padding()
                 .foregroundColor(.secondary)
         }.padding()
-        .navigationTitle(book.title)
+        .navigationTitle(book.title ?? "Unknown")
         .navigationBarTitleDisplayMode(.inline)
     }
 }

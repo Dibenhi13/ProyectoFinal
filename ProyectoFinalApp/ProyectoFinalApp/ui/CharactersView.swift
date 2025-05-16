@@ -6,42 +6,44 @@
 //
 import Foundation
 import SwiftUI
+
+import SwiftUI
+ 
 struct CharactersView: View {
     @EnvironmentObject var controlador: ControladorApp
     
-    @State private var isLoading = true
     var body: some View {
-        NavigationView {
-            Group {
-                List(controlador.personajes) { character in
-                    NavigationLink(destination: CharacterDetailView(character: character)) {
-                        HStack {
-                            AsyncImage(url: URL(string: character.image ?? "")) { image in
+        NavigationStack {
+            List(controlador.personajes) { character in
+                NavigationLink(destination: CharacterDetailView(character: character)) {
+                    HStack {
+                        if let imageURLString = character.image, let url = URL(string: imageURLString){
+                            AsyncImage(url: url) { image in
                                 image
                                     .resizable()
                                     .scaledToFill()
                             } placeholder: {
-                                Color.gray
+                                ProgressView()
                             }
                             .frame(width: 60, height: 60)
                             .clipShape(Circle())
-                            
                             VStack(alignment: .leading) {
-                                Text(character.fullName)
+                                Text(character.name)
                                     .font(.headline)
-                                if let house = character.hogwartsHouse {
-                                    Text(house)
-                                        .font(.subheadline)
-                                        .foregroundColor(.secondary)
-                                }
+                                Text(character.house ?? "Unknown house")
+                                    .font(.subheadline)
+                                    .foregroundColor(.gray)
                             }
                         }
-                        .padding(.vertical, 5)
                     }
+                    .padding(.vertical, 5)
                 }
             }
+            .navigationTitle("Characters")
         }
-        .navigationTitle("Personajes")
+        .task {
+            await controlador.cargarPersonajes()
+        }
     }
 }
 
@@ -50,3 +52,4 @@ struct CharactersView: View {
    CharactersView()
        .environmentObject(ControladorApp())
 }
+
