@@ -10,38 +10,49 @@ import SwiftUI
 
 struct BooksView: View {
     @EnvironmentObject var controlador: ControladorApp
+    @EnvironmentObject var themeManager: AppThemeManager
     
     var body: some View {
-        NavigationView{
-            Group{
-                List(controlador.libros) {book in
-                    NavigationLink(destination:BookDetailView(book: book)){
-                        HStack{
-                            AsyncImage(url:URL(string:book.cover ?? "")) {image in
-                                image
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
-                            }placeholder:{
-                                Color.gray
+        NavigationStack {
+            ScrollView {
+                LazyVStack(spacing: 16) {
+                    ForEach(controlador.libros) { book in
+                        NavigationLink(destination: BookDetailView(book: book)) {
+                            HStack(spacing: 16) {
+                                AsyncImage(url:URL(string:book.cover ?? "")) {image in
+                                    image
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fit)
+                                }placeholder:{
+                                    Color.gray
+                                }
+                                Text(book.title ?? "Unknown")
+                                    .padding(.leading, 10)
+                                    .font(.headline)
+                                    .foregroundColor(.primary)
                             }
-                            .frame(width:60, height: 90)
-                            .clipShape(RoundedRectangle(cornerRadius: 8))
-                            
-                            Text(book.title ?? "Unknown")
-                                .font(.headline)
-                                .padding(.leading, 10)
+                            Spacer()
                         }
-                        .padding(.vertical, 4)
+                        .padding()
+                        .background(themeManager.primaryColor.opacity(0.6))
+                        .cornerRadius(16)
+                        .shadow(color: Color.black.opacity(0.1), radius: 4, x: 0, y: 2)
                     }
+                    .padding(.horizontal)
                 }
-            }
-        }
-        .navigationTitle("Books")
-    }
-}
+                .padding(.top)
 
+            }
+            .background(themeManager.secondaryColor.ignoresSafeArea())
+            .navigationTitle("Books")
+
+        }
+    }
+    
+}
 
 
 #Preview {
     BooksView()
 }
+
