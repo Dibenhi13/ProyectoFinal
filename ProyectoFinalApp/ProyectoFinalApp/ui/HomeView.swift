@@ -10,25 +10,39 @@ import SwiftUI
 struct HomeView: View {
     @EnvironmentObject var themeManager: AppThemeManager
     
+    
     var body: some View{
         NavigationView{
-            VStack(spacing: 40){
-                Text("Potter Head")
-                    .font(.largeTitle)
-                    .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
-                    .foregroundColor(themeManager.primaryColor)
+            ZStack{
+                Color(themeManager.secondaryColor)
+                    .ignoresSafeArea()
                 
-                NavigationLink(destination: HouseSelectionView()){
-                    Text("Select a House")
-                        .font(.title2)
-                        .padding()
-                        .background(themeManager.primaryColor)
-                        .foregroundColor(.white)
-                        .cornerRadius(12)
+                VStack(spacing: 40){
+                    Spacer()
+                    
+                    Image("logoAPP")
+                        .resizable()
+                        .scaledToFit()
+                    
+                    Text("Potter Head")
+                        .font(.system(size:36, weight: .bold, design: .serif))
+                        .foregroundColor(themeManager.primaryColor)
+                    Spacer()
+                    
+                    NavigationLink(destination: HouseSelectionView()){
+                        Text("Select a House")
+                            .font(.title2)
+                            .padding()
+                            .frame(maxWidth:240)
+                            .background(themeManager.primaryColor)
+                            .foregroundColor(.white)
+                            .cornerRadius(12)
+                    }
+                    Spacer()
                 }
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .background(Color("NeutralBackground").ignoresSafeArea())
             }
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .background(Color("NeutralBackgroud").ignoresSafeArea())
         }
     }
 }
