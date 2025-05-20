@@ -43,7 +43,7 @@ struct CharactersView: View {
                                         .foregroundColor(.primary)
                                     Text(character.house ?? "Unknown house")
                                         .font(.subheadline)
-                                        .foregroundColor(.secondary)
+                                        .foregroundColor(.white)
                                 }
                                 Spacer()
                             }

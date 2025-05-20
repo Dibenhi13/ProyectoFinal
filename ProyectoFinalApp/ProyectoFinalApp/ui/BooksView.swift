@@ -29,7 +29,7 @@ struct BooksView: View {
                                 Text(book.title ?? "Unknown")
                                     .padding(.leading, 10)
                                     .font(.headline)
-                                    .foregroundColor(.primary)
+                                    .foregroundColor(.white)
                             }
                             Spacer()
                         }

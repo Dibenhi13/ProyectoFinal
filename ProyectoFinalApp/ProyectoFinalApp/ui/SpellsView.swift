@@ -25,8 +25,8 @@ struct SpellsView: View {
                                     .foregroundColor(.primary)
                                 Text(hechizo.description ?? "Unknown Use")
                                     .font(.subheadline)
-                                    .foregroundColor(.secondary)
-                            }  
+                                    .foregroundColor(.white)
+                            }
                             Spacer()
                         }
                         .padding()

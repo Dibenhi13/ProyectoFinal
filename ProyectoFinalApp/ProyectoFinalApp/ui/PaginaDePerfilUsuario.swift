@@ -24,8 +24,8 @@ struct PerfilUsuario: View {
                    .aspectRatio(contentMode: .fill)
                    .frame(width: 100, height: 100)
                    .clipShape(Circle())
-                   .overlay(Circle().stroke(Color.white, lineWidth: 2))
-                   .background(Circle().fill(Color.pink.opacity(0.7)))
+                   .overlay(Circle().stroke(themeManager.primaryColor, lineWidth: 2))
+                   .background(Circle().fill(Color.primary.opacity(0.7)))
            }
            .onChange(of: foto_seleccionada) { _, nuevo_valor in
                Task {
@@ -40,7 +40,7 @@ struct PerfilUsuario: View {
            
            // Info de usuario
            RoundedRectangle(cornerRadius: 20)
-               .fill(Color.white)
+               .fill(themeManager.primaryColor)
                .shadow(radius: 5)
                .frame(width: 300, height: 150)
                .overlay(
@@ -48,19 +48,19 @@ struct PerfilUsuario: View {
                        Text(controlador.perfil_a_mostrar?.username ?? "Usuario")
                            .font(.title2)
                            .fontWeight(.bold)
-                           .foregroundColor(.black)
+                           .foregroundColor(.white)
                        Text(controlador.perfil_a_mostrar?.name ?? "Nombre completo")
                            .font(.headline)
-                           .foregroundColor(.gray)
+                           .foregroundColor(.white)
                        Text(controlador.perfil_a_mostrar?.email ?? "correo@ejemplo.com")
                            .font(.subheadline)
-                           .foregroundColor(.gray)
+                           .foregroundColor(.white)
                    }
                )
            Spacer()
        }
        .frame(maxWidth: .infinity, maxHeight: .infinity)
-       .background(themeManager.primaryColor.opacity(0.2))
+       .background(themeManager.secondaryColor)
    }
 }
 #Preview {

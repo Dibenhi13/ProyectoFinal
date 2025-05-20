@@ -8,92 +8,89 @@
 import SwiftUI
 
 struct CharacterDetailView: View {
-
+    
     @EnvironmentObject var controlador: ControladorApp
+    @EnvironmentObject var themeManager: AppThemeManager
+    
     let character: Character
-
+    
     var body: some View {
         ScrollView {
-            VStack(alignment: .leading, spacing: 16) {
+            VStack(spacing: 16) {
                 // Imagen
-                if let personaje = controlador.personajeSeleccionado,
-                   let imageURLString = personaje.image,
-                   let imageUrl = URL(string: imageURLString) {
-                    AsyncImage(url: imageUrl) { image in
+                if let imageURL = character.image, let url = URL(string: imageURL) {
+                    AsyncImage(url: url) { image in
                         image
                             .resizable()
-                            .scaledToFit()
-                            .frame(height: 300)
+                            .scaledToFill()
+                            .frame(width: 320, height: 350)
                             .clipped()
                             .cornerRadius(20)
                     } placeholder: {
-                        Color.gray.opacity(0.2)
-                            .frame(height: 300)
+                        Color.gray.opacity(0.3)
+                            .frame(height: 280)
                             .cornerRadius(20)
                     }
-                    .padding(.horizontal)
                 }
-
-                // Nombre y actor
-                infoItem(label: "Name", value: character.name)
-                infoItem(label: "Played by", value: character.actor)
-                Divider()
-                // Datos generales
-                infoItem(label: "Hogwarts House", value: character.house ?? "Unknown")
-                infoItem(label: "Species", value: character.species ?? "Unknown")
-                infoItem(label: "Gender", value: character.gender.capitalized)
-                if let sangre = character.ancestry?.capitalized {
-                    infoItem(label: "Ancestry", value: sangre)
+                
+                VStack(alignment: .leading, spacing: 12) {
+                    Text(character.name)
+                        .font(.title)
+                        .fontWeight(.bold)
+                        .foregroundColor(.white)
+                    
+                    Divider().background(.white.opacity(0.3))
+                    
+                    Group {
+                        infoRow("House", character.house)
+                        infoRow("Species", character.species)
+                        infoRow("Gender", character.gender)
+                        infoRow("Ancestry", character.ancestry)
+                        infoRow("Date of Birth", character.dateOfBirth)
+                        infoRow("Eye Color", character.eyeColour)
+                        infoRow("Hair Color", character.hairColour)
+                    }
+                    
+                    Divider().background(.white.opacity(0.3))
+                    Text("Wand")
+                        .font(.headline)
+                        .foregroundColor(.white)
+                    infoRow("Wood", character.wand.wood ?? "Unknown")
+                    infoRow("Core", character.wand.core ?? "Unknown")
+                    if let length = character.wand.length {
+                        infoRow("Length", "\(length) inches")
+                    }
+                    
+                    
+                    if let patronus = character.patronus, !patronus.isEmpty {
+                        Divider().background(.white.opacity(0.3))
+                        infoRow("Patronus", patronus)
+                    }
                 }
-                infoItem(label: "Date of Birth", value: character.dateOfBirth ?? "Unknown")
-
-                if let year = character.yearOfBirth {
-                    infoItem(label: "Year of Birth", value: "\(year)")
-                }
-
-                if let ojos = character.eyeColour?.capitalized {
-                    infoItem(label: "Eye Color", value: ojos)
-                }
-                if let pelo = character.hairColour?.capitalized {
-                    infoItem(label: "Hair Color", value: pelo)
-                }
-
-                // Varita
-                Divider()
-                Text("Wand")
-                    .font(.headline)
-                    .padding(.horizontal)
-                infoItem(label: "Wood", value: character.wand.wood ?? "Unknown")
-                infoItem(label: "Core", value: character.wand.core ?? "Unknown")
-                if let length = character.wand.length {
-                    infoItem(label: "Length", value: "\(length) inches")
-                }
-
-                // Patronus
-                if let patronus = character.patronus?.capitalized {
-                    infoItem(label: "Patronus", value: patronus)
-                }
+                .padding()
+                .background(themeManager.primaryColor)
+                .cornerRadius(20)
+                .padding(.horizontal)
+                .shadow(radius: 5)
             }
-            .padding()
+            .padding(.bottom)
         }
+        .background(themeManager.secondaryColor.ignoresSafeArea())
         .navigationTitle(character.name)
-        .navigationBarTitleDisplayMode(.inline)
-        .background(Color.white)
     }
-
-
-    func infoItem(label: String, value: String) -> some View {
-        VStack(alignment: .leading, spacing: 4) {
-            Text(label)
-                .font(.caption)
-                .foregroundColor(.gray)
-            Text(value)
-                .font(.body)
-                .foregroundColor(.black)
-            Divider().background(Color.gray.opacity(0.3))
+    
+    //FUNCION DE INFOROW
+    
+    func infoRow(_ title: String, _ value: String?) -> some View {
+        HStack {
+            Text(title + ":")
+                .foregroundColor(.white)
+                .fontWeight(.semibold)
+            Spacer()
+            Text(value ?? "Unknown")
+                .foregroundColor(.white.opacity(0.9))
         }
-        .padding(.horizontal)
+        .font(.subheadline)
     }
 }
- 
  

@@ -24,7 +24,7 @@ struct HouseSelectionView: View {
                         dismiss()
                     }){
                         VStack(spacing: 12) {
-                            Image(house.rawValue)
+                            Image(house.imageName)
                                 .resizable()
                                 .scaledToFit()
                                 .frame(height: 120)
