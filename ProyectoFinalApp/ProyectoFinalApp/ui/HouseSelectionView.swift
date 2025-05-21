@@ -26,10 +26,10 @@ struct HouseSelectionView: View {
                         VStack(spacing: 12) {
                             Image(house.imageName)
                                 .resizable()
-                                .scaledToFit()
-                                .frame(height: 120)
+                                .scaledToFill()
+                                .frame(width: 120, height: 120)
                                 .padding()
-                                .background(Color.white)
+                                .background(Color.white.opacity(0.0))
                                 .cornerRadius(16)
                                 .overlay(
                                     RoundedRectangle(cornerRadius: 16)
