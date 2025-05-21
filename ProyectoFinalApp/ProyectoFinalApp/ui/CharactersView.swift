@@ -20,7 +20,7 @@ struct CharactersView: View {
                     ForEach(controlador.personajes) { character in
                         NavigationLink(destination: CharacterDetailView(character: character)) {
                             HStack(spacing: 16) {
-                                // Imagen circular
+                                // Imagen
                                 if let imageURL = character.image, let url = URL(string: imageURL) {
                                     AsyncImage(url: url) { image in
                                         image
@@ -57,7 +57,7 @@ struct CharactersView: View {
                 }
                 .padding(.top)
             }
-            .background(themeManager.secondaryColor.ignoresSafeArea()) // Fondo de página
+            .background(themeManager.secondaryColor.ignoresSafeArea())
             .navigationTitle("Characters")
         }
         .task {

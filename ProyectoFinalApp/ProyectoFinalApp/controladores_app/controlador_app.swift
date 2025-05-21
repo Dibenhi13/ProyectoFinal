@@ -31,7 +31,7 @@ class ControladorApp: ObservableObject {
         }
     }
     
-    //MONO CHINO
+    //PERSONAJES
     func cargarPersonajes() async {
         if let descargados = await api.descargarPersonajes() {
             self.personajes = descargados
@@ -43,7 +43,7 @@ class ControladorApp: ObservableObject {
             self.personajeSeleccionado = await api.descargarInfoPersonajes(id: id)
         }
     }
-    //PLANETA
+    //LIBROS
     func cargarLibros() async {
         if let descargados = await api.descargarLibros() {
             self.libros = descargados
@@ -57,7 +57,7 @@ class ControladorApp: ObservableObject {
     }
     
     
-    //PUBLICACIONES
+    //HECHIZOS
     func cargarHechizos() async {
         if let descargados = await api.descargarHechizos() {
             self.hechizos = descargados

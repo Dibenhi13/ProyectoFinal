@@ -14,9 +14,9 @@
 		FB9E3E192DD3F20A0050C378 /* SpellsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9E3E182DD3F20A0050C378 /* SpellsView.swift */; };
 		FB9E3E1B2DD3F4470050C378 /* BooksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9E3E1A2DD3F4470050C378 /* BooksView.swift */; };
 		FB9E3E1D2DD3F6C60050C378 /* BookDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9E3E1C2DD3F6C60050C378 /* BookDetailView.swift */; };
-		FB9E3E232DD402FF0050C378 /* usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9E3E222DD402FF0050C378 /* usuario.swift */; };
-		FBB285AB2DD246270050C8CF /* PaginaDePerfilUsuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB285AA2DD246270050C8CF /* PaginaDePerfilUsuario.swift */; };
-		FBB285AE2DD246E40050C8CF /* errores.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB285AD2DD246E40050C8CF /* errores.swift */; };
+		FB9E3E232DD402FF0050C378 /* usuario_harry.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9E3E222DD402FF0050C378 /* usuario_harry.swift */; };
+		FBB285AB2DD246270050C8CF /* PerfilUsuarioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB285AA2DD246270050C8CF /* PerfilUsuarioView.swift */; };
+		FBB285AE2DD246E40050C8CF /* errores_api.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB285AD2DD246E40050C8CF /* errores_api.swift */; };
 		FBB285B02DD247080050C8CF /* harrypotter_api.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB285AF2DD247080050C8CF /* harrypotter_api.swift */; };
 		FBB285B32DD2478B0050C8CF /* controlador_app.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB285B22DD2478B0050C8CF /* controlador_app.swift */; };
 		FBB285B92DD2482B0050C8CF /* character_harry.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB285B82DD2482B0050C8CF /* character_harry.swift */; };
@@ -40,9 +40,9 @@
 		FB9E3E182DD3F20A0050C378 /* SpellsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellsView.swift; sourceTree = "<group>"; };
 		FB9E3E1A2DD3F4470050C378 /* BooksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksView.swift; sourceTree = "<group>"; };
 		FB9E3E1C2DD3F6C60050C378 /* BookDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailView.swift; sourceTree = "<group>"; };
-		FB9E3E222DD402FF0050C378 /* usuario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = usuario.swift; sourceTree = "<group>"; };
-		FBB285AA2DD246270050C8CF /* PaginaDePerfilUsuario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginaDePerfilUsuario.swift; sourceTree = "<group>"; };
-		FBB285AD2DD246E40050C8CF /* errores.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = errores.swift; sourceTree = "<group>"; };
+		FB9E3E222DD402FF0050C378 /* usuario_harry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = usuario_harry.swift; sourceTree = "<group>"; };
+		FBB285AA2DD246270050C8CF /* PerfilUsuarioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfilUsuarioView.swift; sourceTree = "<group>"; };
+		FBB285AD2DD246E40050C8CF /* errores_api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = errores_api.swift; sourceTree = "<group>"; };
 		FBB285AF2DD247080050C8CF /* harrypotter_api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = harrypotter_api.swift; sourceTree = "<group>"; };
 		FBB285B22DD2478B0050C8CF /* controlador_app.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = controlador_app.swift; sourceTree = "<group>"; };
 		FBB285B82DD2482B0050C8CF /* character_harry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = character_harry.swift; sourceTree = "<group>"; };
@@ -99,8 +99,8 @@
 				FB026A842DDE2F4D0009A5EF /* temas */,
 				FBB285C02DD24BD00050C8CF /* ui */,
 				FBB285B42DD247DB0050C8CF /* modelos_harry */,
-				FBB285B12DD247770050C8CF /* controladores */,
-				FBB285AC2DD246D00050C8CF /* servicios_API */,
+				FBB285B12DD247770050C8CF /* controladores_app */,
+				FBB285AC2DD246D00050C8CF /* servicios_api */,
 				FB7FF6E22DCE59F30098AB41 /* PotterApp.swift */,
 				FB7FF6E62DCE59F40098AB41 /* Assets.xcassets */,
 				FB7FF6E82DCE59F40098AB41 /* Preview Content */,
@@ -116,21 +116,21 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		FBB285AC2DD246D00050C8CF /* servicios_API */ = {
+		FBB285AC2DD246D00050C8CF /* servicios_api */ = {
 			isa = PBXGroup;
 			children = (
-				FBB285AD2DD246E40050C8CF /* errores.swift */,
+				FBB285AD2DD246E40050C8CF /* errores_api.swift */,
 				FBB285AF2DD247080050C8CF /* harrypotter_api.swift */,
 			);
-			path = servicios_API;
+			path = servicios_api;
 			sourceTree = "<group>";
 		};
-		FBB285B12DD247770050C8CF /* controladores */ = {
+		FBB285B12DD247770050C8CF /* controladores_app */ = {
 			isa = PBXGroup;
 			children = (
 				FBB285B22DD2478B0050C8CF /* controlador_app.swift */,
 			);
-			path = controladores;
+			path = controladores_app;
 			sourceTree = "<group>";
 		};
 		FBB285B42DD247DB0050C8CF /* modelos_harry */ = {
@@ -140,7 +140,7 @@
 				FBB285BA2DD249200050C8CF /* houses_harry.swift */,
 				FBB285BC2DD249540050C8CF /* spells_harry.swift */,
 				FBB285BE2DD24AD00050C8CF /* books_harry.swift */,
-				FB9E3E222DD402FF0050C378 /* usuario.swift */,
+				FB9E3E222DD402FF0050C378 /* usuario_harry.swift */,
 			);
 			path = modelos_harry;
 			sourceTree = "<group>";
@@ -148,7 +148,7 @@
 		FBB285C02DD24BD00050C8CF /* ui */ = {
 			isa = PBXGroup;
 			children = (
-				FBB285AA2DD246270050C8CF /* PaginaDePerfilUsuario.swift */,
+				FBB285AA2DD246270050C8CF /* PerfilUsuarioView.swift */,
 				FBB285C12DD24BEC0050C8CF /* HomeView.swift */,
 				FBB285C72DD251BE0050C8CF /* HouseSelectionView.swift */,
 				FBB285CB2DD255150050C8CF /* MainTabView.swift */,
@@ -231,7 +231,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FBB285AB2DD246270050C8CF /* PaginaDePerfilUsuario.swift in Sources */,
+				FBB285AB2DD246270050C8CF /* PerfilUsuarioView.swift in Sources */,
 				FBB285BF2DD24AD00050C8CF /* books_harry.swift in Sources */,
 				FBB285BD2DD249540050C8CF /* spells_harry.swift in Sources */,
 				FBB285CC2DD255150050C8CF /* MainTabView.swift in Sources */,
@@ -240,12 +240,12 @@
 				FB9E3E1B2DD3F4470050C378 /* BooksView.swift in Sources */,
 				FBB285B02DD247080050C8CF /* harrypotter_api.swift in Sources */,
 				FBB285CE2DD256800050C8CF /* CharactersView.swift in Sources */,
-				FB9E3E232DD402FF0050C378 /* usuario.swift in Sources */,
+				FB9E3E232DD402FF0050C378 /* usuario_harry.swift in Sources */,
 				FB9E3E172DD3EE990050C378 /* CharacterDetailView.swift in Sources */,
 				FBB285B32DD2478B0050C8CF /* controlador_app.swift in Sources */,
 				FBB285B92DD2482B0050C8CF /* character_harry.swift in Sources */,
 				FB9E3E1D2DD3F6C60050C378 /* BookDetailView.swift in Sources */,
-				FBB285AE2DD246E40050C8CF /* errores.swift in Sources */,
+				FBB285AE2DD246E40050C8CF /* errores_api.swift in Sources */,
 				FBB285C22DD24BEC0050C8CF /* HomeView.swift in Sources */,
 				FB9E3E192DD3F20A0050C378 /* SpellsView.swift in Sources */,
 				FBB285BB2DD249200050C8CF /* houses_harry.swift in Sources */,

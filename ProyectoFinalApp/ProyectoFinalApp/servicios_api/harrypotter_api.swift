@@ -16,6 +16,8 @@ import SwiftUI
  
 class HarryPotterAPI : Codable{
     let url_base = "https://potterhead-api.vercel.app/api"
+    
+    //PERSONAJES
     func descargarPersonajes() async -> [Character]?{
         let ubicacion_recurso = "/characters"
         return await descargar(recurso: ubicacion_recurso)
@@ -24,6 +26,8 @@ class HarryPotterAPI : Codable{
         let ubicacion_recurso = "/characters/\(id)"
         return await descargar(recurso: ubicacion_recurso)
     }
+    
+    //LIBROS
     func descargarLibros() async -> [Books]?{
         let ubicacion_recurso = "/books"
         return await descargar(recurso: ubicacion_recurso)

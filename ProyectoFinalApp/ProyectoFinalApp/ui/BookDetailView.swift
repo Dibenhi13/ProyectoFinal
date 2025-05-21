@@ -15,7 +15,7 @@ struct BookDetailView: View {
     var body: some View {
         ScrollView {
             VStack(spacing: 20) {
-                AsyncImage(url: URL(string: book.cover ?? "Image didnt load")) { image in
+                AsyncImage(url: URL(string: book.cover ?? "Image didn't load")) { image in
                     image
                         .resizable()
                         .scaledToFill()
@@ -62,6 +62,8 @@ struct BookDetailView: View {
             .navigationTitle("Book Details")
         }
     }
+
+//FUNCION INFOROW
     
 func infoRow(_ title: String, _ value: String?) -> some View {
     HStack(alignment: .top) {

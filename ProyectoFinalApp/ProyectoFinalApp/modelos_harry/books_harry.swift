@@ -12,10 +12,10 @@ struct Books: Identifiable, Codable {
     let serial: String?
     let title: String?
     let summary: String?
-        let release_date: String?
-        let dedication: String?
-        let pages: String?
-        let cover: String?
-        let wiki: String?
+    let release_date: String?
+    let dedication: String?
+    let pages: String?
+    let cover: String?
+    let wiki: String?
 }
 

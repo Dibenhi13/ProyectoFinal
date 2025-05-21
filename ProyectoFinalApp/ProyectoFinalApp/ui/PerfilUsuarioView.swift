@@ -10,7 +10,7 @@ import PhotosUI
 
 struct PerfilUsuario: View {
    @EnvironmentObject var controlador: ControladorApp
-    @EnvironmentObject var themeManager: AppThemeManager
+   @EnvironmentObject var themeManager: AppThemeManager
     
    @State private var foto_seleccionada: PhotosPickerItem? = nil
    @State private var foto_a_mostrar: UIImage? = nil

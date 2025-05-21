@@ -28,7 +28,6 @@ struct Character: Codable, Identifiable {
    let hairColour: String?
    let wand: Wand
    let patronus: String?
-   let actor: String
    let image: String?
 
 }
