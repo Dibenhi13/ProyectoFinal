@@ -8,25 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		FB7FF6E32DCE59F30098AB41 /* PotterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7FF6E22DCE59F30098AB41 /* PotterApp.swift */; };
-		FB7FF6E52DCE59F30098AB41 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7FF6E42DCE59F30098AB41 /* ContentView.swift */; };
 		FB7FF6E72DCE59F40098AB41 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB7FF6E62DCE59F40098AB41 /* Assets.xcassets */; };
 		FB7FF6EA2DCE59F40098AB41 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB7FF6E92DCE59F40098AB41 /* Preview Assets.xcassets */; };
-		FB80AD3A2DD4FF73000EBDD3 /* DescagaModelo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB80AD392DD4FF73000EBDD3 /* DescagaModelo.swift */; };
 		FB9E3E172DD3EE990050C378 /* CharacterDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9E3E162DD3EE990050C378 /* CharacterDetailView.swift */; };
 		FB9E3E192DD3F20A0050C378 /* SpellsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9E3E182DD3F20A0050C378 /* SpellsView.swift */; };
 		FB9E3E1B2DD3F4470050C378 /* BooksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9E3E1A2DD3F4470050C378 /* BooksView.swift */; };
 		FB9E3E1D2DD3F6C60050C378 /* BookDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9E3E1C2DD3F6C60050C378 /* BookDetailView.swift */; };
-		FB9E3E232DD402FF0050C378 /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9E3E222DD402FF0050C378 /* Usuario.swift */; };
+		FB9E3E232DD402FF0050C378 /* usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9E3E222DD402FF0050C378 /* usuario.swift */; };
 		FBB285AB2DD246270050C8CF /* PaginaDePerfilUsuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB285AA2DD246270050C8CF /* PaginaDePerfilUsuario.swift */; };
 		FBB285AE2DD246E40050C8CF /* errores.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB285AD2DD246E40050C8CF /* errores.swift */; };
 		FBB285B02DD247080050C8CF /* harrypotter_api.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB285AF2DD247080050C8CF /* harrypotter_api.swift */; };
 		FBB285B32DD2478B0050C8CF /* controlador_app.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB285B22DD2478B0050C8CF /* controlador_app.swift */; };
-		FBB285B92DD2482B0050C8CF /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB285B82DD2482B0050C8CF /* Character.swift */; };
+		FBB285B92DD2482B0050C8CF /* character_harry.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB285B82DD2482B0050C8CF /* character_harry.swift */; };
 		FBB285BB2DD249200050C8CF /* houses_harry.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB285BA2DD249200050C8CF /* houses_harry.swift */; };
 		FBB285BD2DD249540050C8CF /* spells_harry.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB285BC2DD249540050C8CF /* spells_harry.swift */; };
 		FBB285BF2DD24AD00050C8CF /* books_harry.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB285BE2DD24AD00050C8CF /* books_harry.swift */; };
 		FBB285C22DD24BEC0050C8CF /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB285C12DD24BEC0050C8CF /* HomeView.swift */; };
-		FBB285C42DD24C770050C8CF /* House.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB285C32DD24C770050C8CF /* House.swift */; };
+		FBB285C42DD24C770050C8CF /* HouseThemes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB285C32DD24C770050C8CF /* HouseThemes.swift */; };
 		FBB285C62DD2500D0050C8CF /* AppThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB285C52DD2500D0050C8CF /* AppThemeManager.swift */; };
 		FBB285C82DD251BE0050C8CF /* HouseSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB285C72DD251BE0050C8CF /* HouseSelectionView.swift */; };
 		FBB285CC2DD255150050C8CF /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB285CB2DD255150050C8CF /* MainTabView.swift */; };
@@ -36,25 +34,23 @@
 /* Begin PBXFileReference section */
 		FB7FF6DF2DCE59F30098AB41 /* ProyectoFinalApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProyectoFinalApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB7FF6E22DCE59F30098AB41 /* PotterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PotterApp.swift; sourceTree = "<group>"; };
-		FB7FF6E42DCE59F30098AB41 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		FB7FF6E62DCE59F40098AB41 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FB7FF6E92DCE59F40098AB41 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		FB80AD392DD4FF73000EBDD3 /* DescagaModelo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescagaModelo.swift; sourceTree = "<group>"; };
 		FB9E3E162DD3EE990050C378 /* CharacterDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailView.swift; sourceTree = "<group>"; };
 		FB9E3E182DD3F20A0050C378 /* SpellsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellsView.swift; sourceTree = "<group>"; };
 		FB9E3E1A2DD3F4470050C378 /* BooksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksView.swift; sourceTree = "<group>"; };
 		FB9E3E1C2DD3F6C60050C378 /* BookDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailView.swift; sourceTree = "<group>"; };
-		FB9E3E222DD402FF0050C378 /* Usuario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Usuario.swift; sourceTree = "<group>"; };
+		FB9E3E222DD402FF0050C378 /* usuario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = usuario.swift; sourceTree = "<group>"; };
 		FBB285AA2DD246270050C8CF /* PaginaDePerfilUsuario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginaDePerfilUsuario.swift; sourceTree = "<group>"; };
 		FBB285AD2DD246E40050C8CF /* errores.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = errores.swift; sourceTree = "<group>"; };
 		FBB285AF2DD247080050C8CF /* harrypotter_api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = harrypotter_api.swift; sourceTree = "<group>"; };
 		FBB285B22DD2478B0050C8CF /* controlador_app.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = controlador_app.swift; sourceTree = "<group>"; };
-		FBB285B82DD2482B0050C8CF /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
+		FBB285B82DD2482B0050C8CF /* character_harry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = character_harry.swift; sourceTree = "<group>"; };
 		FBB285BA2DD249200050C8CF /* houses_harry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = houses_harry.swift; sourceTree = "<group>"; };
 		FBB285BC2DD249540050C8CF /* spells_harry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = spells_harry.swift; sourceTree = "<group>"; };
 		FBB285BE2DD24AD00050C8CF /* books_harry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = books_harry.swift; sourceTree = "<group>"; };
 		FBB285C12DD24BEC0050C8CF /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		FBB285C32DD24C770050C8CF /* House.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = House.swift; sourceTree = "<group>"; };
+		FBB285C32DD24C770050C8CF /* HouseThemes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseThemes.swift; sourceTree = "<group>"; };
 		FBB285C52DD2500D0050C8CF /* AppThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppThemeManager.swift; sourceTree = "<group>"; };
 		FBB285C72DD251BE0050C8CF /* HouseSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseSelectionView.swift; sourceTree = "<group>"; };
 		FBB285CB2DD255150050C8CF /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
@@ -72,6 +68,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FB026A842DDE2F4D0009A5EF /* temas */ = {
+			isa = PBXGroup;
+			children = (
+				FBB285C32DD24C770050C8CF /* HouseThemes.swift */,
+				FBB285C52DD2500D0050C8CF /* AppThemeManager.swift */,
+			);
+			path = temas;
+			sourceTree = "<group>";
+		};
 		FB7FF6D62DCE59F30098AB41 = {
 			isa = PBXGroup;
 			children = (
@@ -91,14 +96,12 @@
 		FB7FF6E12DCE59F30098AB41 /* ProyectoFinalApp */ = {
 			isa = PBXGroup;
 			children = (
+				FB026A842DDE2F4D0009A5EF /* temas */,
 				FBB285C02DD24BD00050C8CF /* ui */,
-				FBB285B42DD247DB0050C8CF /* harry_potter */,
+				FBB285B42DD247DB0050C8CF /* modelos_harry */,
 				FBB285B12DD247770050C8CF /* controladores */,
 				FBB285AC2DD246D00050C8CF /* servicios_API */,
 				FB7FF6E22DCE59F30098AB41 /* PotterApp.swift */,
-				FBB285C32DD24C770050C8CF /* House.swift */,
-				FBB285C52DD2500D0050C8CF /* AppThemeManager.swift */,
-				FB7FF6E42DCE59F30098AB41 /* ContentView.swift */,
 				FB7FF6E62DCE59F40098AB41 /* Assets.xcassets */,
 				FB7FF6E82DCE59F40098AB41 /* Preview Content */,
 			);
@@ -130,17 +133,16 @@
 			path = controladores;
 			sourceTree = "<group>";
 		};
-		FBB285B42DD247DB0050C8CF /* harry_potter */ = {
+		FBB285B42DD247DB0050C8CF /* modelos_harry */ = {
 			isa = PBXGroup;
 			children = (
-				FBB285B82DD2482B0050C8CF /* Character.swift */,
+				FBB285B82DD2482B0050C8CF /* character_harry.swift */,
 				FBB285BA2DD249200050C8CF /* houses_harry.swift */,
 				FBB285BC2DD249540050C8CF /* spells_harry.swift */,
 				FBB285BE2DD24AD00050C8CF /* books_harry.swift */,
-				FB9E3E222DD402FF0050C378 /* Usuario.swift */,
-				FB80AD392DD4FF73000EBDD3 /* DescagaModelo.swift */,
+				FB9E3E222DD402FF0050C378 /* usuario.swift */,
 			);
-			path = harry_potter;
+			path = modelos_harry;
 			sourceTree = "<group>";
 		};
 		FBB285C02DD24BD00050C8CF /* ui */ = {
@@ -234,16 +236,14 @@
 				FBB285BD2DD249540050C8CF /* spells_harry.swift in Sources */,
 				FBB285CC2DD255150050C8CF /* MainTabView.swift in Sources */,
 				FBB285C62DD2500D0050C8CF /* AppThemeManager.swift in Sources */,
-				FBB285C42DD24C770050C8CF /* House.swift in Sources */,
-				FB7FF6E52DCE59F30098AB41 /* ContentView.swift in Sources */,
+				FBB285C42DD24C770050C8CF /* HouseThemes.swift in Sources */,
 				FB9E3E1B2DD3F4470050C378 /* BooksView.swift in Sources */,
-				FB80AD3A2DD4FF73000EBDD3 /* DescagaModelo.swift in Sources */,
 				FBB285B02DD247080050C8CF /* harrypotter_api.swift in Sources */,
 				FBB285CE2DD256800050C8CF /* CharactersView.swift in Sources */,
-				FB9E3E232DD402FF0050C378 /* Usuario.swift in Sources */,
+				FB9E3E232DD402FF0050C378 /* usuario.swift in Sources */,
 				FB9E3E172DD3EE990050C378 /* CharacterDetailView.swift in Sources */,
 				FBB285B32DD2478B0050C8CF /* controlador_app.swift in Sources */,
-				FBB285B92DD2482B0050C8CF /* Character.swift in Sources */,
+				FBB285B92DD2482B0050C8CF /* character_harry.swift in Sources */,
 				FB9E3E1D2DD3F6C60050C378 /* BookDetailView.swift in Sources */,
 				FBB285AE2DD246E40050C8CF /* errores.swift in Sources */,
 				FBB285C22DD24BEC0050C8CF /* HomeView.swift in Sources */,

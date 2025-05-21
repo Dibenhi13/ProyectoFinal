@@ -9,9 +9,9 @@ import Foundation
 
 struct Books: Identifiable, Codable {
     var id: String? { serial }
-        let serial: String?
-        let title: String?
-        let summary: String?
+    let serial: String?
+    let title: String?
+    let summary: String?
         let release_date: String?
         let dedication: String?
         let pages: String?

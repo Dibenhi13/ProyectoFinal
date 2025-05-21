@@ -15,7 +15,7 @@ struct Wand: Codable {
 }
  
 struct Character: Codable, Identifiable {
-    let id: String?
+   let id: String?
    let name: String
    let alternateNames: [String]?
    let species: String?
