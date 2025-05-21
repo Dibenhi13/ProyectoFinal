@@ -42,4 +42,12 @@ class AppThemeManager: ObservableObject {
             return Color("NeutralAccent")
         }
     }
+    
+    var casaSeleccionada: String{
+        if let house = selectedHouse{
+            return String(house.displayName)
+        }else{
+            return String("I didn't identify the house you selected")
+        }
+    }
 }

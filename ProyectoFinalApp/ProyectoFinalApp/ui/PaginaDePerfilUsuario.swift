@@ -15,6 +15,8 @@ struct PerfilUsuario: View {
    @State private var foto_seleccionada: PhotosPickerItem? = nil
    @State private var foto_a_mostrar: UIImage? = nil
     
+    
+    
    var body: some View {
        VStack(spacing: 20) {
            // Foto de perfil
@@ -42,7 +44,7 @@ struct PerfilUsuario: View {
            RoundedRectangle(cornerRadius: 20)
                .fill(themeManager.primaryColor)
                .shadow(radius: 5)
-               .frame(width: 300, height: 150)
+               .frame(width: 320, height: 150)
                .overlay(
                    VStack(spacing: 10) {
                        Text(controlador.perfil_a_mostrar?.username ?? "Usuario")
@@ -54,6 +56,10 @@ struct PerfilUsuario: View {
                            .foregroundColor(.white)
                        Text(controlador.perfil_a_mostrar?.email ?? "correo@ejemplo.com")
                            .font(.subheadline)
+                           .foregroundColor(.white)
+                       
+                       Text("House Selected: \(themeManager.casaSeleccionada)")
+                           .font(.system(size:16, weight: .bold, design: .serif))
                            .foregroundColor(.white)
                    }
                )
